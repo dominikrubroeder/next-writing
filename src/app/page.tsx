@@ -1,13 +1,10 @@
-import NotePanel from "@/app/components/NotePanel";
-import NoteNavigationPanel from "@/app/components/NoteNavigationPanel";
-import NoteListPanel from "@/app/components/NoteListPanel";
+import Link from "next/link";
+import {notes} from "@/app/components/NoteListPanel";
 
 export default function Home() {
     return (
-        <main className="grid h-screen grid-cols-[200px_320px_1fr]">
-            <NoteNavigationPanel/>
-            <NoteListPanel/>
-            <NotePanel/>
+        <main className="h-svh flex items-center justify-center">
+            <Link href={notes[0].href ?? '/'} className="border rounded-md px-3 py-1.5" prefetch>Login</Link>
         </main>
     );
 }
