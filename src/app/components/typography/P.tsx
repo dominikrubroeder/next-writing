@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 export default function P({
   children,
@@ -8,6 +9,8 @@ export default function P({
   className?: string;
 }) {
   return (
-    <p className={`px-8 text-base text-neutral-500 ${className}`}>{children}</p>
+    <p className={cn("px-8 text-base text-neutral-500", className)}>
+      {children}
+    </p>
   );
 }

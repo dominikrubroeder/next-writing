@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 export default function NoteEditorControl({
   children,
@@ -9,7 +10,10 @@ export default function NoteEditorControl({
 }) {
   return (
     <div
-      className={`inline-flex w-auto rounded-md px-3 py-1.5 shadow ${className}`}
+      className={cn(
+        "inline-flex w-auto rounded-md px-3 py-1.5 shadow",
+        className,
+      )}
     >
       {children}
     </div>

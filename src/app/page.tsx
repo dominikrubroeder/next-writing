@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex h-svh items-center justify-center">
       <Link
-        href={notes[0].href ?? "/"}
+        href={notes[0].href + "-" + notes[0].id ?? "/"}
         className="invisible animate-fade-up rounded-md border px-3 py-1.5 opacity-0"
         prefetch
       >
