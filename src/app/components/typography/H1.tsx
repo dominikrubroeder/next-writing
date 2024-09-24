@@ -1,5 +1,11 @@
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
-export default function H1({children, className}: { children: ReactNode, className?: string }) {
-    return <h1 className={`text-3xl px-8 ${className}`}>{children}</h1>
+export default function H1({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <h1 className={`px-8 text-3xl ${className}`}>{children}</h1>;
 }
