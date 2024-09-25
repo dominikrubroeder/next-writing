@@ -1,12 +1,12 @@
-import NoteEditorControl from "@/app/components/NoteEditorControl";
-import NoteEditorComponent from "@/app/components/NoteEditorComponent";
-import { notes } from "@/app/components/NoteListPanel";
+import NoteEditorControl from "@/components/NoteEditorControl";
+import NoteEditorComponent from "@/components/NoteEditorComponent";
+import { notes } from "@/components/NoteListPanel";
 
 export default function NotePage({ params }: { params: { slug: string } }) {
   const activeNoteId = Number(
     params.slug.split("-")[params.slug.split("-").length - 1],
   );
-  const activeNote = notes[activeNoteId];
+  const activeNote = notes[activeNoteId - 1];
 
   return (
     <div className="relative overflow-y-auto overflow-x-hidden px-4">
@@ -31,15 +31,18 @@ export default function NotePage({ params }: { params: { slug: string } }) {
           <NoteEditorControl>Share</NoteEditorControl>
         </div>
       </div>
+
       <div className="rounded-md bg-neutral-100 px-3 py-1.5 text-center text-xs text-neutral-500">
         Last edited
       </div>
+
       <div className="mx-auto max-w-screen-md space-y-8 py-12">
         <div className="h-[35svh] w-full rounded-xl bg-neutral-100" />
         {activeNote.body.map((component, index) => (
           <NoteEditorComponent key={index} component={component} />
         ))}
       </div>
+      
       <div className="sticky bottom-0 left-0 right-0 h-12 w-full bg-gradient-to-b from-white/10 to-white" />
     </div>
   );

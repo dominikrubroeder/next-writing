@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { H1, H2, P } from "@/app/components/typography";
+import { H1, H2, P } from "@/components/typography";
 
 export interface INote {
   id: number;

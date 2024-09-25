@@ -1,16 +1,12 @@
-import Link from "next/link";
-import { notes } from "@/app/components/NoteListPanel";
+import { notes } from "@/components/NoteListPanel";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
     <main className="flex h-svh items-center justify-center">
-      <Link
-        href={notes[0].href + "-" + notes[0].id ?? "/"}
-        className="invisible animate-fade-up rounded-md border px-3 py-1.5 opacity-0"
-        prefetch
-      >
+      <Button href={`/note/${notes[0].id}`} prefetch>
         Login
-      </Link>
+      </Button>
     </main>
   );
 }
