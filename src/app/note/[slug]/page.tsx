@@ -1,6 +1,6 @@
-import NoteEditorControl from "@/components/note/editor/NoteEditorControl";
 import NoteEditorComponent from "@/components/note/editor/NoteEditorComponent";
 import { notes } from "@/components/note/list/NoteListPanel";
+import Button from "@/components/ui/Button";
 
 export default function NotePage({ params }: { params: { slug: string } }) {
   const activeNoteId = Number(
@@ -12,23 +12,23 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     <div className="relative overflow-y-auto overflow-x-hidden px-4">
       <div className="sticky top-0 flex justify-between gap-4 bg-background py-4">
         <div className="space-x-2">
-          <NoteEditorControl>Playfair Display</NoteEditorControl>
+          <Button>Playfair Display</Button>
 
-          <NoteEditorControl>16px</NoteEditorControl>
+          <Button>16px</Button>
 
-          <NoteEditorControl>B U I S</NoteEditorControl>
+          <Button>B U I S</Button>
 
-          <NoteEditorControl>Alignment</NoteEditorControl>
+          <Button>Alignment</Button>
         </div>
 
         <div className="space-x-2">
-          <NoteEditorControl>Foto</NoteEditorControl>
+          <Button>Foto</Button>
 
-          <NoteEditorControl>Link</NoteEditorControl>
+          <Button>Link</Button>
         </div>
 
         <div className="space-x-2">
-          <NoteEditorControl>Share</NoteEditorControl>
+          <Button>Share</Button>
         </div>
       </div>
 

@@ -2,6 +2,9 @@ import Link from "next/link";
 import { H2, P } from "@/components/typography";
 import { INote } from "@/components/note/editor/NoteEditorComponent";
 import { cn } from "@/lib/utils";
+import Button from "@/components/ui/Button";
+import { PencilSquareIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
+import { ListIcon } from "lucide-react";
 
 export const notes: INote[] = [
   {
@@ -28,6 +31,7 @@ export const notes: INote[] = [
     starred: true,
     archived: false,
     deleted: false,
+    assigned: [],
   },
   {
     id: 2,
@@ -53,6 +57,7 @@ export const notes: INote[] = [
     starred: false,
     archived: true,
     deleted: false,
+    assigned: [],
   },
   {
     id: 3,
@@ -78,6 +83,7 @@ export const notes: INote[] = [
     starred: false,
     archived: false,
     deleted: true,
+    assigned: [],
   },
 ];
 
@@ -85,7 +91,17 @@ export default function NoteListPanel({ activeNote }: { activeNote: number }) {
   return (
     <div className="h-full space-y-6 overflow-y-auto border-x px-6 py-6">
       <div className="flex items-center justify-between gap-2">
-        <div>Write Grid List</div>
+        <div>
+          <Button>
+            <PencilSquareIcon className="size-5 shrink-0" />
+          </Button>
+          <Button>
+            <Squares2X2Icon className="size-5 shrink-0" />
+          </Button>
+          <Button>
+            <ListIcon className="size-5 shrink-0" />
+          </Button>
+        </div>
         <div>Delete</div>
       </div>
 
@@ -102,7 +118,7 @@ export default function NoteListPanel({ activeNote }: { activeNote: number }) {
               href={`/note/${note.id}`}
               className={cn(
                 "grid gap-1 rounded-md px-4 py-4 transition hover:bg-neutral-100",
-                index === activeNote - 1 ? "bg-neutral-100" : "bg-white",
+                index === activeNote - 1 ? "bg-muted" : "bg-white",
               )}
               scroll={false}
               prefetch

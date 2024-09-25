@@ -12,6 +12,7 @@ export interface INote {
   starred: boolean;
   archived: boolean;
   deleted: boolean;
+  assigned: string[];
 }
 
 export interface IEditorComponent {

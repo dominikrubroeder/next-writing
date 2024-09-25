@@ -10,12 +10,14 @@ export default function Button({
   onClick,
   href,
   prefetch,
+  animate,
 }: {
   children: ReactNode;
   className?: string;
   onClick?: () => void;
   href?: string;
   prefetch?: boolean;
+  animate?: boolean;
 }) {
   const router = useRouter();
 
@@ -28,7 +30,8 @@ export default function Button({
   return (
     <button
       className={cn(
-        "invisible animate-fade-up rounded-md border px-3 py-1.5 opacity-0 hover:bg-neutral-50",
+        "rounded-md border px-3 py-1.5 hover:bg-neutral-50",
+        animate && "invisible animate-fade-up opacity-0",
         className,
       )}
       onClick={onClickHandler}
