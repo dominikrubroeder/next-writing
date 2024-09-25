@@ -25,6 +25,9 @@ export const notes: INote[] = [
     ],
     lastEdit: "2024-09-18",
     previewImage: "path/to/image.jpg",
+    starred: true,
+    archived: false,
+    deleted: false,
   },
   {
     id: 2,
@@ -47,6 +50,9 @@ export const notes: INote[] = [
     ],
     lastEdit: "2024-09-14",
     previewImage: "path/to/image.jpg",
+    starred: false,
+    archived: true,
+    deleted: false,
   },
   {
     id: 3,
@@ -69,6 +75,9 @@ export const notes: INote[] = [
     ],
     lastEdit: "2024-09-14",
     previewImage: "path/to/image.jpg",
+    starred: false,
+    archived: false,
+    deleted: true,
   },
 ];
 

@@ -12,7 +12,7 @@ export default function NoteLayout({
   const activeNoteId = Number(params.slug);
 
   return (
-    <main className="grid h-screen grid-cols-[200px_320px_1fr]">
+    <main className="grid h-screen grid-cols-[14rem_20rem_1fr]">
       <Sidebar />
       <NoteListPanel activeNote={activeNoteId} />
       {children}

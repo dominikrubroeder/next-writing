@@ -9,6 +9,9 @@ export interface INote {
   lastEdit: string;
   previewImage: string;
   href?: string;
+  starred: boolean;
+  archived: boolean;
+  deleted: boolean;
 }
 
 export interface IEditorComponent {
