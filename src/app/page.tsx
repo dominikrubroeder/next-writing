@@ -1,4 +1,4 @@
-import { notes } from "@/components/NoteListPanel";
+import { notes } from "@/components/note/list/NoteListPanel";
 import Button from "@/components/ui/Button";
 
 export default function Home() {

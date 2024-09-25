@@ -1,6 +1,6 @@
-import NoteEditorControl from "@/components/NoteEditorControl";
-import NoteEditorComponent from "@/components/NoteEditorComponent";
-import { notes } from "@/components/NoteListPanel";
+import NoteEditorControl from "@/components/note/editor/NoteEditorControl";
+import NoteEditorComponent from "@/components/note/editor/NoteEditorComponent";
+import { notes } from "@/components/note/list/NoteListPanel";
 
 export default function NotePage({ params }: { params: { slug: string } }) {
   const activeNoteId = Number(
@@ -42,7 +42,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
           <NoteEditorComponent key={index} component={component} />
         ))}
       </div>
-      
+
       <div className="sticky bottom-0 left-0 right-0 h-12 w-full bg-gradient-to-b from-white/10 to-white" />
     </div>
   );

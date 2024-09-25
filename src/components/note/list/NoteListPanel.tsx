@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { H2, P } from "@/components/typography";
-import { INote } from "@/components/NoteEditorComponent";
+import { INote } from "@/components/note/editor/NoteEditorComponent";
 import { cn } from "@/lib/utils";
 
 export const notes: INote[] = [
